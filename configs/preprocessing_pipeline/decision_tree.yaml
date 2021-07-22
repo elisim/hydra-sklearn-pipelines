@@ -1,0 +1,19 @@
+# Hydra config file for the decition_tree preprocessing steps
+_target_: src.preprocessing.pipelines.make_preprocessing_pipeline
+
+#StepName: 
+#    _target_: <class to initiating the step>
+#    param1: <step's first parameter>
+#    param2: <step's second parameter, etc.>
+
+    - StandardScaler:
+        _target_: sklearn.preprocessing.StandardScaler
+        
+    - VarianceThreshold:
+        _target_: sklearn.feature_selection.VarianceThreshold
+        threshold: 0.1
+        
+    - SimpleImputer:
+        _target_: sklearn.impute.SimpleImputer
+        strategy: 'constant'
+        fill_value: '-1'
