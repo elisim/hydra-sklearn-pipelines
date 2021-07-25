@@ -7,3 +7,5 @@ defaults:
     
     
 # You might add another configurations: which model to use, which visualizations, etc. 
+
+print_config: True

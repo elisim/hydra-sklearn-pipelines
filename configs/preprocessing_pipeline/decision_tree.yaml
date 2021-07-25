@@ -1,11 +1,12 @@
 # Hydra config file for the decition_tree preprocessing steps
-_target_: src.preprocessing.pipelines.make_preprocessing_pipeline
+_target_: hydra_sklearn_pipeline.make_pipeline
 
 #StepName: 
 #    _target_: <class to initiating the step>
 #    param1: <step's first parameter>
 #    param2: <step's second parameter, etc.>
 
+steps: # use yaml list syntax to preserve to order
     - StandardScaler:
         _target_: sklearn.preprocessing.StandardScaler
         
