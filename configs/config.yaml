@@ -9,4 +9,4 @@ defaults:
 # You might add another configurations: which model to use, which visualizations, etc.
 # See also: https://medium.com/pytorch/hydra-a-fresh-look-at-configuration-for-machine-learning-projects-50583186b710
 print_config: True
-
+seed: 42

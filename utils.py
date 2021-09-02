@@ -15,6 +15,7 @@ def print_config(
     resolve: bool = True,
 ) -> None:
     """Prints content of DictConfig using Rich library and its tree structure.
+    Based on: https://github.com/ashleve/lightning-hydra-template/blob/main/src/utils/utils.py
 
     Args:
         config (DictConfig): Config.
