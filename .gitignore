@@ -2,3 +2,4 @@
 __pycache___
 *.pyc
 outputs/
+.idea/
