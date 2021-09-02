@@ -1,8 +1,9 @@
 from typing import Sequence
+
+from omegaconf import DictConfig, OmegaConf
 from rich import print
 from rich.syntax import Syntax
 from rich.tree import Tree
-from omegaconf import DictConfig, OmegaConf
 
 
 def print_config(

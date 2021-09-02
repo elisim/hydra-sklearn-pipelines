@@ -1,9 +1,12 @@
 import logging
+
 import hydra
 from omegaconf import DictConfig
+
 import utils
 
 log = logging.getLogger(__name__)
+
 
 @hydra.main(config_path="configs/", config_name="config.yaml")
 def main(config: DictConfig):
@@ -13,7 +16,9 @@ def main(config: DictConfig):
         utils.print_config(config, resolve=True)
 
     log.info("Instantiating preprocessing pipeline")
-    preprocessing_pipeline = hydra.utils.instantiate(config.preprocessing_pipeline, _recursive_=False)
+    preprocessing_pipeline = hydra.utils.instantiate(
+        config.preprocessing_pipeline, _recursive_=False
+    )
     print(type(preprocessing_pipeline))
 
 

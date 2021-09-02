@@ -1,4 +1,4 @@
-# Hydra config file for the decition_tree preprocessing steps
+# Hydra config file for the decision_tree preprocessing steps
 _target_: hydra_sklearn_pipeline.make_pipeline
 
 #StepName:

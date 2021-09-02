@@ -12,3 +12,17 @@ repos:
   hooks:
     - id: trailing-whitespace
     - id: check-yaml
+
+- repo: https://github.com/psf/black
+  rev: 20.8b1
+  hooks:
+    - id: black
+      args: [--line-length, "99"]
+
+
+- repo: https://github.com/PyCQA/isort
+  rev: 5.8.0
+  hooks:
+    - id: isort
+      args: [--profile, black, --filter-files]
+

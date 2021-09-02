@@ -1,0 +1,20 @@
+# Hydra config file for the random_forest preprocessing steps
+_target_: hydra_sklearn_pipeline.make_pipeline
+
+#StepName:
+#    _target_: <class to instantiate the step>
+#    param1: <step's first parameter>
+#    param2: <step's second parameter, etc.>
+
+steps_config: # use yaml list syntax to preserve to order
+    - StandardScaler:
+        _target_: sklearn.preprocessing.StandardScaler
+
+    - VarianceThreshold:
+        _target_: sklearn.feature_selection.VarianceThreshold
+        threshold: 0.1
+
+    - SimpleImputer:
+        _target_: sklearn.impute.SimpleImputer
+        strategy: 'constant'
+        fill_value: '-1'
