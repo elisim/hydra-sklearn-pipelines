@@ -1,4 +1,4 @@
-# Hydra-Sklearn Processing Pipelines
+# Hydra-Sklearn Preprocessing Pipelines
 
 ![Sklearn-Hydra](https://user-images.githubusercontent.com/17675462/131835987-63b1d347-5a05-49c8-af36-d1a393d87c22.png)
 
