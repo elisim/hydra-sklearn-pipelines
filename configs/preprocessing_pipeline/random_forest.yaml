@@ -10,11 +10,6 @@ steps_config: # use yaml list syntax to preserve to order
     - StandardScaler:
         _target_: sklearn.preprocessing.StandardScaler
 
-    - VarianceThreshold:
-        _target_: sklearn.feature_selection.VarianceThreshold
-        threshold: 0.1
-
-    - SimpleImputer:
-        _target_: sklearn.impute.SimpleImputer
-        strategy: 'constant'
-        fill_value: '-1'
+    - PCA:
+        _target_: sklearn.decomposition.PCA
+        n_components: 2

@@ -7,14 +7,15 @@ _target_: hydra_sklearn_pipeline.make_pipeline
 #    param2: <step's second parameter, etc.>
 
 steps_config: # use yaml list syntax to preserve to order
-    - StandardScaler:
-        _target_: sklearn.preprocessing.StandardScaler
+    - SimpleImputer:
+        _target_: sklearn.impute.SimpleImputer
+        strategy: 'constant'
+        fill_value: '-1'
 
     - VarianceThreshold:
         _target_: sklearn.feature_selection.VarianceThreshold
         threshold: 0.1
 
-    - SimpleImputer:
-        _target_: sklearn.impute.SimpleImputer
-        strategy: 'constant'
-        fill_value: '-1'
+    - StandardScaler:
+        _target_: sklearn.preprocessing.StandardScaler
+
