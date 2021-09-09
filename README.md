@@ -5,7 +5,7 @@
 
 This repository accompanying the blog post:
 
-[Creating Configurable Data Pre-Processing Pipelines by Combining Hydra and Sklearn]() - by Eli Simhayev & Benjamin Bodner
+[Creating Configurable Data Pre-Processing Pipelines by Combining Hydra and Sklearn](https://medium.com/beyondminds/creating-configurable-data-pre-processing-pipelines-by-combining-hydra-and-sklearn-812065c9ab64) - by Eli Simhayev & Benjamin Bodner
 
 # Running Different Pipelines
 Run:
