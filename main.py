@@ -17,7 +17,7 @@ def main(config: DictConfig):
 
     log.info("Instantiating preprocessing pipeline")
     preprocessing_pipeline = hydra.utils.instantiate(
-        config.preprocessing_pipeline, _recursive_=False
+        config.preprocessing_pipeline, _recursive_=True
     )
     print(type(preprocessing_pipeline))
 

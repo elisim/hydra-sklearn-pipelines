@@ -1,19 +1,22 @@
 # Hydra config file for the decision_tree preprocessing steps
-_target_: hydra_sklearn_pipeline.make_pipeline
+_target_: sklearn.pipeline.Pipeline
 
 #StepName:
 #    _target_: <class to initiating the step>
 #    param1: <step's first parameter>
 #    param2: <step's second parameter, etc.>
 
-steps_config: # use yaml list syntax to preserve to order
+steps: # use yaml list syntax to preserve to order
+    - name: "StandardScaler"
     - StandardScaler:
         _target_: sklearn.preprocessing.StandardScaler
 
+    - name: "VarianceThreshold"
     - VarianceThreshold:
         _target_: sklearn.feature_selection.VarianceThreshold
         threshold: 0.1
 
+    - name: "SimpleImputer"
     - SimpleImputer:
         _target_: sklearn.impute.SimpleImputer
         strategy: 'constant'
