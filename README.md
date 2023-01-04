@@ -8,7 +8,7 @@ This repository accompanying the blog post:
 [Creating Configurable Data Pre-Processing Pipelines by Combining Hydra and Sklearn](https://medium.com/beyondminds/creating-configurable-data-pre-processing-pipelines-by-combining-hydra-and-sklearn-812065c9ab64) - by Eli Simhayev & Benjamin Bodner
 
 ## Update 4.1.23
-When I wrote this blog-post, the stable version of Hydra was 1.1
+When I wrote this blog-post, the stable version of Hydra was 1.1.
 Now, the stable version is 1.3, so note that this code work with Hydra 1.1 :) 
 
 # Running Different Pipelines
