@@ -2,11 +2,12 @@ import logging
 
 import hydra
 import numpy as np
-from omegaconf import DictConfig
+from omegaconf import DictConfig, OmegaConf
 
 import utils
 
 log = logging.getLogger(__name__)
+OmegaConf.register_new_resolver("tuple", lambda lst: tuple(lst))
 
 
 @hydra.main(config_path="configs/", config_name="config.yaml")
