@@ -3,7 +3,7 @@
 # specify here default preprocessing configuration
 defaults:
     # can be any config file in the preprocessing_pipeline folder
-    - preprocessing_pipeline: decision_tree.yaml
+    - preprocessing_pipeline: pca.yaml
 
 
 # You might add another configurations: which model to use, which visualizations, etc.

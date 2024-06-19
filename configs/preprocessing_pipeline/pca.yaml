@@ -1,0 +1,19 @@
+# Hydra config file for the random_forest preprocessing steps
+_target_: hydra_sklearn_pipeline.make_pipeline
+
+#StepName:
+#    _target_: <class to instantiate the step>
+#    param1: <step's first parameter>
+#    param2: <step's second parameter, etc.>
+
+steps_config: # use yaml list syntax to preserve to order 
+    - MinMaxScaler:
+        _target_: sklearn.preprocessing.MinMaxScaler
+        clip: true
+        # feature_range: (1, 2)  # interpreted as str
+        # feature_range: [1, 2]  # not a tuple
+        feature_range: "${tuple:[3,4]}"
+
+    - PCA:
+        _target_: sklearn.decomposition.PCA
+        n_components: 5 
