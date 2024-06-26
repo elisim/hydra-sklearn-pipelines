@@ -10,7 +10,7 @@ steps_config: # use yaml list syntax to preserve to order
     - SimpleImputer:
         _target_: sklearn.impute.SimpleImputer
         strategy: 'constant'
-        fill_value: '-1'
+        fill_value: -1
 
     - VarianceThreshold:
         _target_: sklearn.feature_selection.VarianceThreshold
